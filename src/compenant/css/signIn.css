@@ -1,0 +1,42 @@
+.container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container button {
+    outline: none;
+    border: none;
+    width: max-content;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    background-color: #C11E38;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 5px 5px #fff;
+    transition: 0.5s;
+}
+
+.container button:hover {
+    background-color: #8C1837;
+    padding: 1.5rem;
+    box-shadow: -5px -5px #fff;
+    cursor: pointer;
+}
+
+.SignInCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px #C11E38;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
