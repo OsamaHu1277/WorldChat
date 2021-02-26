@@ -8,7 +8,7 @@ const ChatMessages = ({ message, auth }) => {
 
     return (
         <div className={`message ${MessageStat}`}>
-            <img className="avatar" src={photoURL} alt=""></img>
+            <img className="chat_avatar" src={photoURL} alt=""></img>
             {/* <p className="displayName">{displayName}</p> */}
             <p className="text">{text} <br /><span className="date">{time}</span></p>
             {/* <p className="date"></p> */}

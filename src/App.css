@@ -2,5 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    font-family: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(to right, #9DA2B8, #A7A9C9);
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --first-color: #6345E9;
+    --second-color: #C75392;
+}

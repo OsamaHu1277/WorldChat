@@ -3,6 +3,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import firebase from 'firebase/app'
 import './css/ChatRoom.css'
 import ChatMessages from './ChatMessages'
+import Sidebar from './Sidebar/Sidebar';
 const ChatRoom = ({ auth, firestore }) => {
 
 
@@ -34,21 +35,17 @@ const ChatRoom = ({ auth, firestore }) => {
 
     return (
         <div className="ChatRoomContainer">
+            <Sidebar auth={auth} />
             <div className="chatWindow">
-                {DataMessages && DataMessages.map(msg => <ChatMessages key={msg.id} message={msg} auth={auth} />)}
-                <div ref={ScrollByAdding}></div>
+                <div className="chat">
+                    {DataMessages && DataMessages.map(msg => <ChatMessages key={msg.id} message={msg} auth={auth} />)}
+                    <div ref={ScrollByAdding}></div>
+                </div>
+                <form onSubmit={sendMessage}>
+                    <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
+                    <button type='submit' disabled={!formValue || formValue.replace(/^\s+/, "").replace(/\s+$/, "") === ""}><i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
-            <img className="UserIcon" src={photoURL} alt=""></img>
-            <div className="profile">
-                <p className="name">{displayName}</p>
-                <p className="email">{email}</p>
-            </div>
-            <form onSubmit={sendMessage}>
-                <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
-
-                <button type='submit' disabled={!formValue || formValue.replace(/^\s+/, "").replace(/\s+$/, "") === ""}>Send</button>
-            </form>
-            <button className="signOut" onClick={() => auth.signOut()} >Sign Out</button>
         </div>
     )
 }

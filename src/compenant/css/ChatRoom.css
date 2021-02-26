@@ -1,18 +1,71 @@
+.ChatRoomContainer {
+    display: flex;
+    width: 95%;
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-image: linear-gradient(to right, #C75392, #6345E9);
+}
+
+.chatWindow {
+    background-image: linear-gradient(to right, #fff, rgb(240, 240, 240));
+    width: 80%;
+    border-radius: 3rem 0 0 3rem;
+    -webkit-border-radius: 3rem 0 0 3rem;
+    -moz-border-radius: 3rem 0 0 3rem;
+    -ms-border-radius: 3rem 0 0 3rem;
+    -o-border-radius: 3rem 0 0 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.chat::-webkit-scrollbar {
+    width: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.chat::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chat::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ChatRoomContainer form {
+    display: flex;
+}
+
 .ChatRoomContainer form input {
-    position: absolute;
-    bottom: 14%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 61%;
-    height: 5%;
+    width: 100%;
+    height: 50px;
     outline: none;
     background-color: #C11E38;
     border: none;
-    /* border-radius: 0.7rem; */
     color: #fff;
     font-size: 1.2rem;
+    -webkit-transform: ;
+    -moz-transform: ;
+    -ms-transform: ;
+    -o-transform: ;
 }
 
+/* 
 .ChatRoomContainer form input::placeholder {
     color: #571135;
     opacity: 0.7;
@@ -124,7 +177,6 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border-radius: 2rem; */
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 10px;
@@ -132,16 +184,4 @@
     flex-direction: column;
 }
 
-.chatWindow::-webkit-scrollbar {
-    width: 0.25rem;
-    background-color: rgba(0, 0, 0, 0.13);
-}
-
-.chatWindow::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.chatWindow::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
+ */
