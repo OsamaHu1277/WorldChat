@@ -6,7 +6,7 @@ export default function Sidebar({ auth }) {
 
     return (
         <aside>
-            <i id="mobile_icon" className={Show ? "fas fa-bars" : }></i>
+            <i id="mobile_icon" className={Show ? "fas fa-bars" :  "fas fa-times" }></i>
             <div className="userinfo">
             <img className="avatar" src={photoURL} alt=""></img>
             <div className="info">
