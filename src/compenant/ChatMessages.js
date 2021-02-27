@@ -1,10 +1,8 @@
 import React from 'react'
 import './css/ChatMessages.css'
-
 const ChatMessages = ({ message, auth }) => {
     const { text, uid, photoURL, time } = message
     const MessageStat = uid === auth.currentUser.uid ? 'sent' : 'received';
-
 
     return (
         <div className={`message ${MessageStat}`}>

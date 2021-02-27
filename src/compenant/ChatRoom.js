@@ -4,9 +4,10 @@ import firebase from 'firebase/app'
 import './css/ChatRoom.css'
 import ChatMessages from './ChatMessages'
 import Sidebar from './Sidebar/Sidebar';
+import Filter from 'bad-words'
 const ChatRoom = ({ auth, firestore }) => {
 
-
+    var filterwords = new Filter();
     const messages = firestore.collection('message');
     const query = messages.orderBy('createdAt').limitToLast(25);
     const [DataMessages] = useCollectionData(query, { idField: 'id' });
@@ -19,7 +20,7 @@ const ChatRoom = ({ auth, firestore }) => {
         // const { uid, photoURL } = auth.currentUser;
         if (!formValue || formValue.replace(/^\s+/, "").replace(/\s+$/, "") === "") return;
         await messages.add({
-            text: formValue,
+            text: filterwords.clean(formValue),
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             time: new Date().toLocaleTimeString(),
             uid,
@@ -32,11 +33,11 @@ const ChatRoom = ({ auth, firestore }) => {
     }
     const scrollToBottom = () => {
         ScrollByAdding.current.scrollIntoView({ behavior: 'smooth' })
-      }
-      useEffect(() => {
+    }
+    useEffect(() => {
         scrollToBottom()
-      }, [DataMessages]);
-    
+    }, [DataMessages]);
+
 
     return (
         <div className="ChatRoomContainer">
