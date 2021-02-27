@@ -9,14 +9,15 @@ function SignIn({ auth }) {
     }
 
     return (
-        <div className="SignInCont">
+        <section className="SignIn_page">
             <h1 className="title">
                 Enter World Chat
                </h1>
-            <div className="container">
+            <div className="sign_btn">
                 <button onClick={SignInWithGoogle}>Sign in with Google</button>
             </div>
-        </div>
+            <p className="copyright"><h3>Made with <i className="fa fa-heart"></i> by <a href="https://github.com/OsamaHu1277/WorldChat" title="Hi!">OSMX</a> © 2021</h3></p>
+        </section>
     )
 }
 

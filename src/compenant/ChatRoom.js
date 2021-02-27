@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import firebase from 'firebase/app'
 import './css/ChatRoom.css'
@@ -28,10 +28,15 @@ const ChatRoom = ({ auth, firestore }) => {
             email
         })
         setFormValue('')
-        ScrollByAdding.current.scrollIntoView({ behavior: 'smooth' })
+        // ScrollByAdding.current.scrollIntoView({ behavior: 'smooth' })
     }
-
-
+    const scrollToBottom = () => {
+        ScrollByAdding.current.scrollIntoView({ behavior: 'smooth' })
+      }
+      useEffect(() => {
+        scrollToBottom()
+      }, [DataMessages]);
+    
 
     return (
         <div className="ChatRoomContainer">
@@ -42,7 +47,7 @@ const ChatRoom = ({ auth, firestore }) => {
                     <div ref={ScrollByAdding}></div>
                 </div>
                 <form onSubmit={sendMessage}>
-                    <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
+                    <input maxLength="2500" value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
                     <button type='submit' disabled={!formValue || formValue.replace(/^\s+/, "").replace(/\s+$/, "") === ""}><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>

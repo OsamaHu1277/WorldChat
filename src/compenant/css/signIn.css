@@ -1,11 +1,17 @@
-.container {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.SignIn_page {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
 
-.container button {
+.sign_btn {
+    position: relative;
+    height: 100px;
+}
+
+.sign_btn button {
     outline: none;
     border: none;
     width: max-content;
@@ -18,25 +24,32 @@
     transition: 0.5s;
 }
 
-.container button:hover {
-    background-color: #8C1837;
+.sign_btn button:hover {
+    background-color: #af274b;
     padding: 1.5rem;
     box-shadow: -5px -5px #fff;
     cursor: pointer;
-}
-
-.SignInCont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .title {
     font-size: 3rem;
     color: #fff;
     text-shadow: 3px 3px #C11E38;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.copyright {
+    color: #fff;
+    cursor: pointer;
+}
+
+.copyright i {
+    color: #ff1940;
+}
+.copyright a {
+    text-decoration: none;
+    color: rgb(216, 211, 211);
+}
+
+.copyright a:hover {
+    color: #ff1940;
 }

@@ -1,19 +1,32 @@
 .ChatRoomContainer {
     display: flex;
-    width: 95%;
+    width: 90%;
     position: relative;
-    height: 95vh;
+    height: 90vh;
     overflow: hidden;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    background-image: linear-gradient(to right, #C75392, #6345E9);
+    /*background-image: linear-gradient(120deg, #C75392, #6345E9);
+    */
+}
+
+.ChatRoomContainer::before {
+    content: "";
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .4);
+    filter: blur(1rem);
+    -webkit-filter: blur(1rem);
 }
 
 .chatWindow {
-    background-image: linear-gradient(to right, #fff, rgb(240, 240, 240));
+    background: rgba(255, 255, 255, 0.2);
     width: 80%;
     border-radius: 3rem 0 0 3rem;
     -webkit-border-radius: 3rem 0 0 3rem;
@@ -35,11 +48,11 @@
 
 .chat::-webkit-scrollbar {
     width: 0.25rem;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(255, 255, 255, 0.13);
 }
 
 .chat::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .chat::-webkit-scrollbar-thumb {
@@ -55,44 +68,26 @@
     width: 100%;
     height: 50px;
     outline: none;
-    background-color: #C11E38;
+    background-color: rgba(255, 255, 255, .4);
     border: none;
-    color: #fff;
+    color: rgb(34, 33, 33);
     font-size: 1.2rem;
-    -webkit-transform: ;
-    -moz-transform: ;
-    -ms-transform: ;
-    -o-transform: ;
-}
-
-/* 
-.ChatRoomContainer form input::placeholder {
-    color: #571135;
-    opacity: 0.7;
+    padding-left: 15px;
 }
 
 .ChatRoomContainer form button {
-    position: absolute;
-    bottom: 9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10%;
     padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 50px;
     border: none;
-    border-radius: 1rem;
     outline: none;
-    background-color: #A71B37;
-    color: #fff;
+    color: var(--first-color);
     font-weight: bold;
     transition: 0.5s;
-    box-shadow: 2px 2px #fff;
+    background-color: rgba(255, 255, 255, .4);
+  cursor: pointer;
 }
-
-.ChatRoomContainer form button:hover {
-    background-color: #571135;
-    box-shadow: -2px -2px #fff;
-}
-
+/*
 .ChatRoomContainer .UserIcon {
     position: absolute;
     top: 10%;
