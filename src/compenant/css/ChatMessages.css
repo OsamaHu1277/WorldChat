@@ -22,17 +22,21 @@
 
 .text {
     display: block;
-    /* flex-direction: row; */
-    margin-bottom: 12px;
+    /*flex-direction: row;
+    */margin-bottom: 12px;
     line-height: 24px;
     padding: 0.5rem;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 20px;
     position: relative;
     color: white;
     text-align: start;
     background-color: var(--first-color);
     width: fit-content;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 20px 20px 0px 20px;
+    -moz-border-radius: 20px 20px 0px 20px;
+    -ms-border-radius: 20px 20px 0px 20px;
+    -o-border-radius: 20px 20px 0px 20px;
 }
 
 .date {
@@ -51,4 +55,8 @@
 .received .text {
     margin-left: 5px;
     color: #fff;
+}
+
+.sent-A {
+    display: none;
 }

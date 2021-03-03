@@ -1,19 +1,17 @@
 .ChatRoomContainer {
     display: flex;
     width: 90%;
-    position: relative;
-    height: 90vh;
-    overflow: hidden;
+    background-color: #fff;
+    padding: 5px;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    /*background-image: linear-gradient(120deg, #C75392, #6345E9);
-    */
 }
 
 .ChatRoomContainer::before {
+    
     content: "";
     width: 90%;
     height: 90vh;
@@ -26,13 +24,14 @@
 }
 
 .chatWindow {
-    background: rgba(255, 255, 255, 0.2);
+    background: #e4e3e3;
     width: 80%;
-    border-radius: 3rem 0 0 3rem;
-    -webkit-border-radius: 3rem 0 0 3rem;
-    -moz-border-radius: 3rem 0 0 3rem;
-    -ms-border-radius: 3rem 0 0 3rem;
-    -o-border-radius: 3rem 0 0 3rem;
+    height: 80vh;
+    border-radius: 3rem 1rem 1rem 0;
+    -webkit-border-radius: 3rem 1rem 1rem 0;
+    -moz-border-radius: 3rem 1rem 1rem 0;
+    -ms-border-radius: 3rem 1rem 1rem 0;
+    -o-border-radius: 3rem 1rem 1rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -61,16 +60,26 @@
 }
 
 .ChatRoomContainer form {
+    background-color: #fff;
+    position: relative;
     display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 5px;
+    border-radius: 0 0 1rem 0;
+    -webkit-border-radius: 0 0 1rem 0;
+    -moz-border-radius: 0 0 1rem 0;
+    -ms-border-radius: 0 0 1rem 0;
+    -o-border-radius: 0 0 1rem 0;
 }
 
 .ChatRoomContainer form input {
     width: 100%;
+    border: none;
     height: 50px;
     outline: none;
-    background-color: rgba(255, 255, 255, .4);
-    border: none;
-    color: rgb(34, 33, 33);
+    background-color: #fff;
+    color: var(--first-color);
     font-size: 1.2rem;
     padding-left: 15px;
 }
@@ -97,7 +106,7 @@
         -moz-border-radius: 0px;
         -ms-border-radius: 0px;
         -o-border-radius: 0px;
-}
+    }
     .chatWindow {
         padding: 0;
         width: 100%;

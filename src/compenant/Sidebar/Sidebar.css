@@ -9,8 +9,9 @@ aside {
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    color: #fff;
+    color: var(--first-color);
     justify-content: center;
+    z-index: 999;
 }
 
 .userinfo {
@@ -44,7 +45,7 @@ aside .info .username {
 }
 
 aside .signOut {
-    color: #fff;
+    color: var(--first-color);
     background-color: transparent;
     border: none;
     outline: none;
@@ -59,9 +60,6 @@ aside .signOut {
     cursor: pointer;
 }
 
-aside .signOut:hover {
-    color: rgb(231, 228, 228);
-}
 
 #mobile_icon {
     display: none;
@@ -72,7 +70,7 @@ aside .signOut:hover {
         position: absolute;
         left: 0;
         top: 0;
-        display:block;
+        display: block;
     }
     aside {
         position: absolute;
@@ -86,7 +84,7 @@ aside .signOut:hover {
         -moz-transition: left .5s;
         -ms-transition: left .5s;
         -o-transition: left .5s;
-}
+    }
     .activeinfo {
         left: 20%;
         visibility: visible;
