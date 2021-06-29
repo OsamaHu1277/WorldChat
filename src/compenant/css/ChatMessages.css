@@ -19,14 +19,26 @@
 
 
 
-
+.received .text {
+    border-radius: 20px 20px 20px 0px;
+    -webkit-border-radius: 20px 20px 20px 0px;
+    -moz-border-radius: 20px 20px 20px 0px;
+    -ms-border-radius: 20px 20px 20px 0px;
+    -o-border-radius: 20px 20px 20px 0px;
+}
+.sent .text {
+    border-radius: 20px 20px 0px 20px;
+    -webkit-border-radius: 20px 20px 0px 20px;
+    -moz-border-radius: 20px 20px 0px 20px;
+    -ms-border-radius: 20px 20px 0px 20px;
+    -o-border-radius: 20px 20px 0px 20px;
+}
 .text {
     display: block;
     /*flex-direction: row;
     */margin-bottom: 12px;
     line-height: 24px;
     padding: 0.5rem;
-    border-radius: 20px 20px 0px 20px;
     position: relative;
     color: white;
     text-align: start;

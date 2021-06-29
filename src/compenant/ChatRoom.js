@@ -6,7 +6,6 @@ import ChatMessages from './ChatMessages'
 import Sidebar from './Sidebar/Sidebar';
 import Filter from 'bad-words'
 const ChatRoom = ({ auth, firestore }) => {
-
     var filterwords = new Filter();
     const messages = firestore.collection('message');
     const query = messages.orderBy('createdAt').limitToLast(25);
@@ -37,8 +36,6 @@ const ChatRoom = ({ auth, firestore }) => {
     useEffect(() => {
         scrollToBottom()
     }, [DataMessages]);
-
-
     return (
         <div className="ChatRoomContainer">
             <Sidebar auth={auth} />
